@@ -1,12 +1,32 @@
 function VoteController() {
-    this.votes = 0;
+    this.votes = 5;
+    this.decrementBool = false;
+    this.incrementBool = false;
 
     this.incrementVotes = function () {
-      this.votes++
+      if(this.incrementBool === false){
+        this.votes++;
+        if(this.decrementBool === true ){
+          this.decrementBool = false;
+          this.incrementBool = false;
+        }
+        else{
+          this.incrementBool = true;
+        }
+      }
     };
 
     this.decrementVotes = function () {
-      this.votes--;
+      if (this.decrementBool === false){
+        this.votes--;
+        if(this.incrementBool === true){
+          this.decrementBool = false;
+          this.incrementBool = false;  
+        }
+        else{
+          this.decrementBool = true;
+        }
+      }
     };
 }
 
