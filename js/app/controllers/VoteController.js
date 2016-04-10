@@ -13,3 +13,4 @@ function VoteController() {
 angular
     .module('app')
     .controller('VoteController', VoteController);
+    
