@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 <head>
     <meta charset="utf-8">
 
@@ -8,18 +8,16 @@
 </head>
 <body>
 
-    <div ng-app="app">
-        <div ng-controller="VoteController as vm">
-            You have {{ vm.votes }} votes!
+  <div ng-controller="VoteController as vm">
+      You have {{ vm.votes }} votes!
 
-            <button>Add Votes</button>
-            <button>Remove a vote</button>
-        </div>
-    </div>
+      <button ng-click="vm.incrementVotes()">Add Votes</button>
+      <button ng-click="vm.decrementVotes()">Remove a vote</button>
+  </div>
 
-    <script src="js/angular.js"></script>
-    <script src="js/app/app.js"></script>
-    <script src="js/app/controllers/VoteController.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/VoteController.js"></script>
 
 </body>
 </html>
