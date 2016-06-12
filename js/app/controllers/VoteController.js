@@ -1,12 +1,19 @@
 function VoteController() {
-    this.votes = 0;
+    this.votes = 5;
+    var counter = 1
 
     this.incrementVotes = function () {
-      this.votes++;
+      if (counter < 2) {
+        this.votes++;
+        counter++;
+      }
     };
 
     this.decrementVotes = function () {
-      this.votes--;
+      if (counter > 0) {
+        this.votes--;
+        counter--;
+      }
     };
 }
 
