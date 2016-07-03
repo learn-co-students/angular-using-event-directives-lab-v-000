@@ -4,7 +4,7 @@ function VoteController() {
     this.downVote = false;
 
     this.incrementVotes = function () {
-      if (this.upVote === false) {
+      if (this.upVote == false) {
         this.votes ++;
         this.upVote = true;
       } else {
@@ -14,7 +14,7 @@ function VoteController() {
     };
 
     this.decrementVotes = function () {
-      if (this.downVote === false) {
+      if (this.downVote == false) {
         this.votes --;
         this.downVote = true;
       } else {
