@@ -1,23 +1,24 @@
 function VoteController() {
-    this.votes = 0;
+  var vm = this;
+    vm.votes = 0;
 
-    this.incrementVotes = function () {
-      if (this.upvoted === 'true') {
-        this.votes--;
-        this.upvoted = 'false';
+    vm.incrementVotes = function () {
+      if (vm.upvoted === 'true') {
+        vm.votes--;
+        vm.upvoted = 'false';
       } else {
-        this.votes++;
-        this.upvoted = 'true';
+        vm.votes++;
+        vm.upvoted = 'true';
       }
     };
 
-    this.decrementVotes = function () {
-      if (this.downvoted === 'true') {
-        this.votes++;
-        this.downvoted = 'false';
+    vm.decrementVotes = function () {
+      if (vm.downvoted === 'true') {
+        vm.votes++;
+        vm.downvoted = 'false';
       } else {
-        this.votes--;
-        this.downvoted = 'true';
+        vm.votes--;
+        vm.downvoted = 'true';
       }
     };
 }
