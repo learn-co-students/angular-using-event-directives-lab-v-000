@@ -1,12 +1,20 @@
 function VoteController() {
-    this.votes = 0;
+    var vm = this;
 
-    this.incrementVotes = function () {
+    vm.votes = 0;
 
+    vm.incrementVotes = function () {
+      vm.votes++;
+       if (vm.votes >= vm.votes +1) {
+        vm.votes = 0;
+      }
     };
 
-    this.decrementVotes = function () {
-
+    vm.decrementVotes = function () {
+      vm.votes--;
+      if (vmm.votes <= vm.votes -1) {
+        vm.votes = 0;
+      }
     };
 }
 
