@@ -1,13 +1,14 @@
 function VoteController() {
-    this.votes = 0;
+  var vc = this;
+  vc.votes = 0;
 
-    this.incrementVotes = function () {
+  vc.incrementVotes = function () {
+    vc.votes ++;
+  };
 
-    };
-
-    this.decrementVotes = function () {
-
-    };
+  vc.decrementVotes = function () {
+    vc.votes --;
+  };
 }
 
 angular
