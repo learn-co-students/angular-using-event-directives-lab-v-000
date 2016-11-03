@@ -1,15 +1,15 @@
 function VoteController() {
-    this.votes = 0;
+  this.votes = 0;
 
-    this.incrementVotes = function () {
+  this.incrementVotes = function() {
+    this.votes++
+  };
 
-    };
-
-    this.decrementVotes = function () {
-
-    };
+  this.decrementVotes = function() {
+    this.votes--
+  };
 }
 
 angular
-    .module('app')
-    .controller('VoteController', VoteController);
+  .module('app')
+  .controller('VoteController', VoteController);
