@@ -1,12 +1,20 @@
 function VoteController() {
+    this.upVoted = false;
+    this.downVoted = false;
     this.votes = 0;
 
     this.incrementVotes = function () {
-      this.votes++;
+      if (!this.upVoted) {
+        this.votes++;
+        this.upVoted = true;
+      }
     };
 
     this.decrementVotes = function () {
-      this.votes--;
+      if (!this.downVoted) {
+        this.votes--;
+        this.downVoted = true;
+      }
     };
 }
 
