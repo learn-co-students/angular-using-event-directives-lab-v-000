@@ -1,15 +1,32 @@
 function VoteController() {
-    this.votes = 0;
+  var vm = this;
+  
+  vm.votes = 0;
+  
+  vm.clickedIncrement = false;
+  vm.clickedDecrement = false;
 
-    this.incrementVotes = function () {
+  vm.incrementVotes = function () {
+    if (vm.clickedIncrement === false) {
+      vm.votes++;
+      vm.clickedIncrement = true;
+    }
+    else {
+      alert("You can only click once!");
+    }
+  };
 
-    };
-
-    this.decrementVotes = function () {
-
-    };
+  vm.decrementVotes = function () {
+    if (vm.clickedDecrement === false) {
+      vm.votes--;
+      vm.clickedDecrement = true;
+    }
+    else {
+      alert("You can only click once!");
+    }
+  };
 }
 
 angular
-    .module('app')
-    .controller('VoteController', VoteController);
+  .module('app')
+  .controller('VoteController', VoteController);
