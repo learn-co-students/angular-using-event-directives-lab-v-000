@@ -1,12 +1,25 @@
 function VoteController() {
-    this.votes = 0;
+  var vm = this
+    vm.votes = 0;
 
-    this.incrementVotes = function () {
-
+    vm.incrementVotes = function () {
+      if (vm.upvoted == 'true'){
+        vm.votes--;
+        vm.upvoted = 'false';
+      } else {
+        vm.votes++;
+        vm.upvoted = 'true';
+      }
     };
 
-    this.decrementVotes = function () {
-
+    vm.decrementVotes = function () {
+      if (vm.downvted === 'true') {
+        vm.votes++;
+        vm.downvoted = 'false';
+      } else {
+        vm.votes--;
+        vm.downvoted = 'true';
+      }
     };
 }
 
